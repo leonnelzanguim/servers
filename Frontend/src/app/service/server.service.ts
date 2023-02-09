@@ -8,8 +8,8 @@ import {Observable} from "rxjs";
 })
 export class ServerService {
 
-  private readonly serverApiUrl: string = "http://172.19.0.2:8090/api/server";
-  //private readonly serverApiUrl: string = "http://localhost:8091/api/server";
+  //private readonly serverApiUrl: string = "http://172.19.0.2:8090/api/server";
+  private readonly serverApiUrl: string = "http://localhost:8090/api/server";
 
   constructor(private readonly httpClient: HttpClient) { }
 

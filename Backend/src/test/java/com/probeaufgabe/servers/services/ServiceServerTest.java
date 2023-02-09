@@ -26,7 +26,6 @@ class ServiceServerTest {
 
     ServiceServer serviceServer;
 
-    @Autowired
 
     @BeforeEach
     void setUp() {
