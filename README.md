@@ -17,11 +17,14 @@
 ```
 $ git clone https://github.com/leonnelzanguim/servers.git
 ```
-### buid backend
+### buid and run backend
 ```
 $ cd Backend
 $ mvn package
+$ java -jar target/servers-0.0.1-SNAPSHOT.jar
 ```
+
+
 ### build and run backend docker image
 ```
 $ cd Backend
@@ -31,7 +34,7 @@ $ docker run --rm -p 8090:8090 --name backend backend_image_name
 
 the backend is available at : http://localhost:8090/
 
-### buid frontend
+### buid and run frontend
 ```
 $ cd Frontend
 $ npm install
