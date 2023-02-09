@@ -53,3 +53,8 @@ This we use the backend and frontend image from DockerHub.
 ```
 $ docker-compose up
 ```
+
+# TODO
+
+- update the docker-compose file for the communication between the 2 containers.
+- better comment and organize the code
