@@ -1,0 +1,15 @@
+version: '3'
+services:
+  backend:
+    image: 10012975/serverurl:backend1.0
+    ports:
+      - 8090:8090
+  frontend:
+    image: 10012975/serverurl:frontend1.0
+    ports:
+      - 4200:80
+      
+      
+networks:
+ net:
+   driver: bridge
