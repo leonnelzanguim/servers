@@ -1,18 +1,21 @@
-FROM maven:3.8.5-openjdk-17-slim
+# stage 1: build
+FROM maven:3.8.5-openjdk-17 AS builder
 
-WORKDIR /tmp/app
+WORKDIR /app
 
 COPY . .
 
 RUN mvn package -DskipTests
 
-RUN mkdir "/app"
 
-RUN cp target/*.jar /app/server.jar
+# stage 2: run
+FROM openjdk:17-jdk-slim
 
-RUN rm -rf /tmp/app
+WORKDIR /app
+
+COPY --from=builder /app/target/*.jar app.jar
 
 EXPOSE 8090
 
-CMD ["java", "-jar", "/app/server.jar"]
+CMD ["java", "-jar", "app.jar"]
 
